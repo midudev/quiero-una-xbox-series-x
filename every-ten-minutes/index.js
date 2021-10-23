@@ -78,7 +78,7 @@ module.exports = async function (context, myTimer) {
     console.log(log)
     context.log(log)
 
-    await page.screenshot({ path: `screenshots/${vendor}.png` })
+    // await page.screenshot({ path: `screenshots/${vendor}.png` })
     await page.close()
   }
 
