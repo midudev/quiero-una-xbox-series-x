@@ -61,7 +61,7 @@ const shops = [
 ]
 
 module.exports = async function (context, myTimer) {
-  const browser = await chromium.launch({ headless: false })
+  const browser = await chromium.launch({ headless: true })
   const available = []
 
   for (const shop of shops) {
