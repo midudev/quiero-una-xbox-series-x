@@ -4,19 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "func start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "playwright-chromium": "1.16.1"
+  },
   "devDependencies": {
-    "playwright": "^1.16.1",
     "standard": "^16.0.4"
   },
   "eslintConfig": {
     "extends": "standard"
-  },
-  "dependencies": {
-    "@playwright/test": "^1.16.1"
   }
 }
