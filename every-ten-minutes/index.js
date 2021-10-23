@@ -75,7 +75,6 @@ module.exports = async function (context, myTimer) {
 
     const log = `${vendor}: ${hasStock ? 'HAS STOCK!!!! 🤩' : 'Out of Stock 🥲'}`
 
-    console.log(log)
     context.log(log)
 
     // await page.screenshot({ path: `screenshots/${vendor}.png` })
