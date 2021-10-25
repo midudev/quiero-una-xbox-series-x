@@ -82,11 +82,14 @@ module.exports = async function (context, myTimer) {
     const hasStock = await checkStock({ page })
     if (hasStock) available.push(vendor)
 
-    const log = `${vendor}: ${hasStock ? 'HAS STOCK!!!! 🤩' : 'Out of Stock 🥲'}`
+    const msg = `${vendor}: ${hasStock ? 'HAS STOCK!!!! 🤩' : 'Out of Stock 🥲'}`
 
-    context.log(log)
+    context.log(msg)
 
-    // await page.screenshot({ path: `screenshots/${vendor}.png` })
+    hasStock
+    ? await page.screenshot({ path: `screenshots/${vendor}.png` })
+    : ''
+    
     await page.close()
   }
 
