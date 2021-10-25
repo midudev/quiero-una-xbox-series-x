@@ -51,7 +51,6 @@ module.exports = Object.freeze({
       url: 'https://www.pccomponentes.com/microsoft-xbox-series-x-1tb',
       checkStock: async ({ page }) => {
         const content = await page.textContent('#buy-buttons-section')
-        console.log(content)
         return content && content.includes('Añadir al carrito') === true
       }
     }
