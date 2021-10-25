@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "func start"
+    "start": "func start",
+    "local": "node every-ten-minutes/local.js"
   },
   "keywords": [],
   "author": "",
