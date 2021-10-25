@@ -47,6 +47,16 @@ const shops = [
       const content = await page.textContent('#js_add_to_cart_desktop')
       return content.includes('Agotado temporalmente') === false
     }
+  },
+  {
+    vendor: 'PCComponentes',
+    hasSchema: true,
+    url: 'https://www.pccomponentes.com/microsoft-xbox-series-x-1tb',
+    checkStock: async ({ page }) => {
+      const content = await page.textContent('#buy-buttons-section')
+      console.log(content)
+      return content && content.includes('Añadir al carrito') === true
+    }
   }
   // disabled for now because it's not working properly
   // {
